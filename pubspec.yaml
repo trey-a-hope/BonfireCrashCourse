@@ -12,9 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
 
+  cupertino_icons: ^1.0.5
   bonfire: ^3.0.0
   flame_audio: ^2.0.4
   flame_tiled: ^1.12.0
+  macos_ui: ^2.0.2
 
 dev_dependencies:
   flutter_test:
