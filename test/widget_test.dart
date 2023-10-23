@@ -5,7 +5,7 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:bonfire_crash_course/games/bonfire_crash_course.dart';
+import 'package:bonfire_crash_course/presentation/games/bonfire_crash_course.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

@@ -1,5 +1,5 @@
 import 'package:bonfire/bonfire.dart';
-import 'package:bonfire_crash_course/constants/globals.dart';
+import 'package:bonfire_crash_course/data/constants/globals.dart';
 import 'package:flutter/material.dart';
 
 class BonfireCrashCourse extends StatefulWidget {

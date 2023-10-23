@@ -1,6 +1,6 @@
 import 'package:bonfire/bonfire.dart';
-import 'package:bonfire_crash_course/constants/globals.dart';
-import 'package:bonfire_crash_course/constants/sprite_sheets.dart';
+import 'package:bonfire_crash_course/data/constants/globals.dart';
+import 'package:bonfire_crash_course/data/constants/sprite_sheets.dart';
 
 class AnimationConfigs {
   AnimationConfigs._();
