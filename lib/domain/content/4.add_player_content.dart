@@ -14,20 +14,31 @@ class AddPlayerContent extends ContentBuilder {
 
 class _AddPlayerMainContent extends ConsumerWidget {
   @override
-  Widget build(BuildContext context, WidgetRef ref) => const Center(
-        child: Text('Add Player'),
-      );
+  Widget build(BuildContext context, WidgetRef ref) {
+    var gameProvider = ref.watch(Providers.gameProvider);
+
+    return Center(
+      child: Text('Add Player : ${gameProvider.playerName}'),
+    );
+  }
 }
 
 class _AddPlayerSidebarContent extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var contentProvider = ref.read(Providers.contentProvider);
+    var gameProvider = ref.read(Providers.gameProvider);
 
     return Column(
       children: [
         const Text('Slow down!'),
         const Spacer(),
+        Material(
+          child: TextField(
+            onChanged: (val) {
+              gameProvider.updatePlayerName(val);
+            },
+          ),
+        )
       ],
     );
   }

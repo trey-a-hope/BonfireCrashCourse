@@ -1,8 +1,8 @@
-import 'package:bonfire_crash_course/domain/content/2_installation_content.dart';
-import 'package:bonfire_crash_course/domain/content/1_overview_content.dart';
+import 'package:bonfire_crash_course/domain/content/2.installation_content.dart';
+import 'package:bonfire_crash_course/domain/content/1.overview_content.dart';
 import 'package:bonfire_crash_course/domain/abstact_models/content_builder.dart';
-import 'package:bonfire_crash_course/domain/content/3_run_app_content.dart';
-import 'package:bonfire_crash_course/domain/content/4_add_player_content.dart';
+import 'package:bonfire_crash_course/domain/content/3.run_app_content.dart';
+import 'package:bonfire_crash_course/domain/content/4.add_player_content.dart';
 import 'package:flutter/material.dart';
 
 class ContentProvider extends ChangeNotifier {
