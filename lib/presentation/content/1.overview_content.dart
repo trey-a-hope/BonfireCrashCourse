@@ -2,6 +2,7 @@ import 'package:bonfire_crash_course/domain/abstact_models/content_builder.dart'
 import 'package:bonfire_crash_course/domain/providers/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:macos_ui/macos_ui.dart';
 
 class OverviewContent extends ContentBuilder {
   OverviewContent({super.key})
@@ -14,8 +15,18 @@ class OverviewContent extends ContentBuilder {
 
 class _OverviewMainContent extends ConsumerWidget {
   @override
-  Widget build(BuildContext context, WidgetRef ref) => const Center(
-        child: Text('Home'),
+  Widget build(BuildContext context, WidgetRef ref) => Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            'Bonfire Crash Course',
+            style: MacosTheme.of(context).typography.largeTitle,
+          ),
+          Text(
+            'Welcome to the beginners course to learning about Flutters RPG maker framework, Bonfire.',
+            style: MacosTheme.of(context).typography.body,
+          )
+        ],
       );
 }
 

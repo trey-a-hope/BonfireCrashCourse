@@ -5,13 +5,14 @@ import 'package:macos_ui/macos_ui.dart';
 class ContentBuilder extends ConsumerWidget {
   final String title;
   final ConsumerWidget content;
-  final ConsumerWidget sidebarContent;
+  final ConsumerWidget? sidebarContent;
 
-  const ContentBuilder(
-      {super.key,
-      required this.title,
-      required this.content,
-      required this.sidebarContent});
+  const ContentBuilder({
+    super.key,
+    required this.title,
+    required this.content,
+    this.sidebarContent,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -71,7 +72,10 @@ class ContentPageWidget extends StatelessWidget {
           ),
           children: [
             ContentArea(
-              builder: (context, scrollController) => content.content,
+              builder: (context, scrollController) => Padding(
+                padding: const EdgeInsets.all(16),
+                child: content.content,
+              ),
             ),
           ],
         );

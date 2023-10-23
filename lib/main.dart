@@ -88,13 +88,15 @@ class MainView extends ConsumerWidget {
             ],
           ),
         ),
-        endSidebar: Sidebar(
-          minWidth: 200,
-          builder: (context, scrollController) => Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: contentProvider.content.sidebarContent,
-          ),
-        ),
+        endSidebar: contentProvider.content.sidebarContent != null
+            ? Sidebar(
+                minWidth: 200,
+                builder: (context, scrollController) => Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: contentProvider.content.sidebarContent,
+                ),
+              )
+            : null,
         child: ContentPageWidget(
           content: contentProvider.content,
         ),
