@@ -1,25 +1,39 @@
+import 'package:bonfire_crash_course/domain/models/content_builder.dart';
 import 'package:bonfire_crash_course/presentation/content/2.installation_content.dart';
 import 'package:bonfire_crash_course/presentation/content/1.overview_content.dart';
-import 'package:bonfire_crash_course/domain/abstact_models/content_builder.dart';
 import 'package:bonfire_crash_course/presentation/content/3.run_app_content.dart';
 import 'package:bonfire_crash_course/presentation/content/4.add_player_content.dart';
 import 'package:flutter/material.dart';
 
 class ContentProvider extends ChangeNotifier {
+  // Current position in nav stack.
   int _currentIndex = 0;
   int get currentIndex => _currentIndex;
 
-  ContentBuilder get content => _contents[_currentIndex];
+  // Return the content for the current page.
+  ContentBuilder get contentBuilder => _contentBuilders[_currentIndex];
 
-  ContentProvider();
+  // All contents available for the app.
+  List<ContentBuilder> get contentBuilders => _contentBuilders;
 
-  final List<ContentBuilder> _contents = [
+  // Get the previous content's title.
+  String? get previousContentTitle =>
+      _currentIndex < 1 ? null : _contentBuilders[_currentIndex - 1].title;
+
+  // Get the next content's title.
+  String? get nextContentTitle => _currentIndex == _contentBuilders.length - 1
+      ? null
+      : _contentBuilders[_currentIndex + 1].title;
+
+  // All contents available for the app.
+  final List<ContentBuilder> _contentBuilders = [
     OverviewContent(),
     InstallationContent(),
     RunAppContent(),
     AddPlayerContent(),
   ];
 
+  // Update the current index.
   void updateIndex(int index) {
     _currentIndex = index;
     notifyListeners();
