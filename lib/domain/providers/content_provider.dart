@@ -2,7 +2,9 @@ import 'package:bonfire_crash_course/domain/models/content_builder.dart';
 import 'package:bonfire_crash_course/presentation/content/2.installation_content.dart';
 import 'package:bonfire_crash_course/presentation/content/1.overview_content.dart';
 import 'package:bonfire_crash_course/presentation/content/3.run_app_content.dart';
-import 'package:bonfire_crash_course/presentation/content/4.add_player_content.dart';
+import 'package:bonfire_crash_course/presentation/content/4.add_player_overview.dart';
+import 'package:bonfire_crash_course/presentation/content/5.add_player_lets_code.dart';
+import 'package:bonfire_crash_course/presentation/content/6.add_player_demo.dart';
 import 'package:flutter/material.dart';
 
 class ContentProvider extends ChangeNotifier {
@@ -30,7 +32,9 @@ class ContentProvider extends ChangeNotifier {
     OverviewContent(),
     InstallationContent(),
     RunAppContent(),
-    AddPlayerContent(),
+    AddPlayerOverview(),
+    AddPlayerLetsCode(),
+    AddPlayerDemo(),
   ];
 
   // Update the current index.

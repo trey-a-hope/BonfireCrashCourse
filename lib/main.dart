@@ -8,16 +8,10 @@ import 'package:macos_ui/macos_ui.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Pre-load sprite sheets.
-  // await SpriteSheets.load();
-  await _configureMacosWindowUtils();
-  runApp(const App());
-}
+  /// This method initializes macos_window_utils and styles the window.
+  await const MacosWindowUtilsConfig().apply();
 
-/// This method initializes macos_window_utils and styles the window.
-Future<void> _configureMacosWindowUtils() async {
-  const config = MacosWindowUtilsConfig();
-  await config.apply();
+  runApp(const App());
 }
 
 class App extends StatelessWidget {

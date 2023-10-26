@@ -4,8 +4,8 @@ import 'package:bonfire_crash_course/presentation/widgets/nav_buttons_widget.dar
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AddPlayerContent extends ContentBuilder {
-  AddPlayerContent()
+class AddPlayerOverview extends ContentBuilder {
+  AddPlayerOverview()
       : super(
           title: 'Overview',
           category: 'Add Player',
@@ -17,12 +17,10 @@ class AddPlayerContent extends ContentBuilder {
 class _AddPlayerMainContent extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var gameProvider = ref.watch(Providers.gameProvider);
-
-    return Column(
+    return const Column(
       children: [
-        Text('Add Player : ${gameProvider.playerName}'),
-        const NavButtonsWidget(),
+        Text('Overview'),
+        NavButtonsWidget(),
       ],
     );
   }
@@ -33,17 +31,10 @@ class _AddPlayerSidebarContent extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     var gameProvider = ref.read(Providers.gameProvider);
 
-    return Column(
+    return const Column(
       children: [
-        const Text('Slow down!'),
-        const Spacer(),
-        Material(
-          child: TextField(
-            onChanged: (val) {
-              gameProvider.updatePlayerName(val);
-            },
-          ),
-        )
+        Text('Slow down!'),
+        Spacer(),
       ],
     );
   }

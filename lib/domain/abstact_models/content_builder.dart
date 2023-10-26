@@ -21,9 +21,6 @@ class ContentPageWidget extends ConsumerWidget {
               type: PlatformProvidedMenuItemType.about,
             ),
             PlatformProvidedMenuItem(
-              type: PlatformProvidedMenuItemType.zoomWindow,
-            ),
-            PlatformProvidedMenuItem(
               type: PlatformProvidedMenuItemType.quit,
             ),
           ],

@@ -19,6 +19,7 @@ dependencies:
   flutter_highlighter: ^0.1.1
   flutter_riverpod: ^2.3.6
   macos_ui: ^2.0.2
+  widget_with_codeview: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -33,3 +34,4 @@ flutter:
     - assets/audio/
     - assets/images/
     - assets/tiles/
+    - lib/main.dart
